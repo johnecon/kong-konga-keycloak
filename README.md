@@ -456,7 +456,7 @@ RAWTKN=$(curl -s -X POST \
         -d "password=demouser" \
         -d 'grant_type=password' \
         -d "client_id=myapp" \
-        http://${HOST_IP}:8180/realms/experimental/protocol/openid-connect/token \
+        http://${HOST_IP}:8180/realms/${REALM}/protocol/openid-connect/token \
         |jq . )
 
 echo $RAWTKN
